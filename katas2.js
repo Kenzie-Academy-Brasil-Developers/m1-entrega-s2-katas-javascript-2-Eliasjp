@@ -1,37 +1,46 @@
-// comece a criar a sua função add na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(add(3, 5) === 8, 'A função add não está funcionando como esperado');
-
-
-// comece a criar a sua função multiply na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
-
-
-// comece a criar a sua função power na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
-
-
-// comece a criar a sua função factorial na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
-
-
-/**
- * BONUS (aviso: o grau de dificuldade é bem maior !!!)
- */
-
-// crie a função fibonacci
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
+function add (a, b){
+    let addTotal = 0
+    addTotal += a
+    addTotal += b
+    return addTotal
+  }
+  
+  console.log(add(3, 10)) // 13
+  
+  function multiply (a, b){
+    totalMult = 0
+    for (let i = 1; i <= b; i = add(i, 1)){
+      totalMult = add(totalMult, a)
+    }
+    return totalMult
+  }
+  
+  console.log(multiply(6, 8)) // 48
+  
+  function power (a, b){
+    totalPower = 0
+    powerA = a
+    for (let i = 1; i < b; i = add(i, 1)){
+      while (totalPower == 0){
+        totalPower = powerA
+      }
+      totalPower = multiply(add(totalPower, 0), a)
+    }
+    return totalPower
+  }
+  
+  console.log(power(4, 8)) //65,536
+  
+  function factorial (number){
+    totalFac = 0
+    result0Fac = 1
+    for (let i = 1; i <= number; i = add(i, 1)){
+      while (totalFac == 0){
+        totalFac = result0Fac
+      }
+      totalFac = multiply(totalFac, i)
+      }
+    return totalFac
+  }
+  
+  console.log(factorial(9)) // 362,880
